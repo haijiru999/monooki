@@ -1,17 +1,19 @@
-function adjustHeight() {
-    $('#cardMain').height(0);
+function adjustHeight(selector) {
+    $obj = $(selector);
+    $obj.height(0);
 
-    const height = $('#cardBody').height()
-        - $('#cardHeader').height()
-        - $('#cardFooter').height();
+    let height = $obj.parent().height();
+    $obj.siblings().each(function (index, element) {
+        height -= $(element).height();
+    });
 
-    $('#cardMain').height(height);
+    $obj.height(height);
 }
 
 $(function () {
     $(window).resize(function () {
-        adjustHeight();
+        adjustHeight('#cardMain');
     });
 
-    adjustHeight();
+    adjustHeight('#cardMain');
 });
