@@ -16,10 +16,13 @@ body {
 }
 
 .content {
-    height: calc(100% - 50px - 40px); /* ${toolbar-height} - ${content-margine} */
-    margin: 20px 0;
+    height: calc(100% - 50px); /* ${toolbar-height} */
 }
 
 .card-main {
     overflow: auto;
+}
+
+.main {
+    padding: 20px;
 }
