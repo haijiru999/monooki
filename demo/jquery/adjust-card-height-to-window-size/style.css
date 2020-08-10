@@ -12,10 +12,10 @@ body {
 }
 
 .container {
-    height: 100%;
+    height: calc(100% - 50px);
+    padding: 20px;
 }
 
 .content {
-    height: calc(100% - 50px - 40px);
-    margin: 20px 0;
+    height: 100%;
 }
